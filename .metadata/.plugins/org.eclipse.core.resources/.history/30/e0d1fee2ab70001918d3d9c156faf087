@@ -1,0 +1,16 @@
+package mybatis;
+
+public class Singer {
+	private String name;
+	private int member;
+	
+	public Singer() {
+		
+	}
+	public Singer(String name, int member) {
+		this.name = name;
+		this.member = member;
+	}
+	
+	
+}

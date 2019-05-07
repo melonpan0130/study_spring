@@ -107,6 +107,7 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc -->
+		<!-- oracle구조와 맞추기 위해 -->
 		<dependency>
 		    <groupId>com.oracle</groupId>
 		    <artifactId>ojdbc6</artifactId>

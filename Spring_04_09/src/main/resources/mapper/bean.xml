@@ -43,4 +43,5 @@
 	<bean id="test1" class="mybatisExam.Test1">
 		<constructor-arg ref="sqlSession"/>
 	</bean>
+	
 </beans>

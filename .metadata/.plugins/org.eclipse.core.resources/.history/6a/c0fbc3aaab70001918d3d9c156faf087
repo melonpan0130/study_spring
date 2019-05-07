@@ -1,0 +1,7 @@
+package mybatis;
+
+public class Singer {
+	private String name;
+	private String member;
+	
+}

@@ -8,4 +8,51 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select count(*)
 		from member
 	</select>
+	
+	<select id="getSingerMember" resultType="int">
+		select member
+		from member
+		where name=#{name}
+	</select>
+	
+	<select id="getSingerName" resultType="String">
+		select name
+		from member
+		where member=#{count}
+	</select>
+	
+	<select id="getSingerNameMember" resultType="String">
+		select name
+		from member
+		where member=#{member} and name=#{name}  
+	</select>
+	
+	<select id="getSinger1" resultType="mybatis.Singer">
+		select *
+		from member
+		where member=#{member} and name=#{name}
+	</select>
+	
+	<select id="insertSinger">
+		insert into member(name, member)
+		values(#{name}, #{member})
+	</select>
+	
+	<select id="getSingers" resultType="mybatis.Singer">
+		select * 
+		from member
+		where member=#{member}
+	</select>
+	
+	<select id="updateSinger">
+		update member
+		set member=#{member}
+		where name=#{name}
+	</select>
+	
+	<select id="deleteSinger">
+		delete 
+		from member
+		where name=#{name}
+	</select>
 </mapper>
