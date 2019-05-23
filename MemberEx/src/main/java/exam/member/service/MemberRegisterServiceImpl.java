@@ -26,5 +26,4 @@ public class MemberRegisterServiceImpl implements MemberRegisterService{
 		MemberVo newMember = new MemberVo(req.getEmail(), req.getPassword(), req.getName(), new Date());
 		memberDao.insert(newMember);
 	}
-
 }

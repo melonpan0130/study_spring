@@ -26,7 +26,7 @@ public class MemberDaoImpl implements MemberDao {
 	@Override
 	public Collection<MemberVo> selectAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return map.values();
 	}
 
 	@Override
