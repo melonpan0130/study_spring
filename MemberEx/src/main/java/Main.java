@@ -1,5 +1,9 @@
 import exam.member.dao.MemberDao;
 import exam.member.dao.MemberDaoImpl;
+import exam.member.service.MemberListPrintService;
+import exam.member.service.MemberListPrintServiceImpl;
+import exam.member.service.MemberPrinterService;
+import exam.member.service.MemberPrinterServiceImpl;
 import exam.member.service.MemberRegisterService;
 import exam.member.service.MemberRegisterServiceImpl;
 import exam.member.ui.MemberUI;
@@ -11,6 +15,12 @@ public class Main {
 		MemberRegisterService memberRegisterService = new MemberRegisterServiceImpl(memberDao);
 		MemberUI memberUI = new MemberUI();
 		memberUI.setMemberRegisterService(memberRegisterService);
+		
+		MemberPrinterService memberPrinterService = new MemberPrinterServiceImpl();
+		MemberListPrintService memberListPrintService = new MemberListPrintServiceImpl(memberDao, memberPrinterService);
+		
+		memberUI.setMemberListPrintService(memberListPrintService); // print
+		
 		memberUI.showMenu();
 	}
 

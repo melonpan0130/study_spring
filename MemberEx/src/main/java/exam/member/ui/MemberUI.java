@@ -2,15 +2,24 @@ package exam.member.ui;
 
 import java.util.Scanner;
 
+import exam.member.service.MemberChangeService;
+import exam.member.service.MemberListPrintService;
 import exam.member.service.MemberRegisterService;
 import exam.member.vo.RegisterRequest;
 
 public class MemberUI {
 	MemberRegisterService memberRegisterService;
+	MemberListPrintService memberListPrinterService;
+	MemberChangeService memberChangeService;
+	
 	public MemberUI() { }
 	
 	public void setMemberRegisterService(MemberRegisterService memberRegisterService) {
 		this.memberRegisterService = memberRegisterService;
+	}
+	
+	public void setMemberListPrintService(MemberListPrintService memberListPrinterService) {
+		this.memberListPrinterService = memberListPrinterService;
 	}
 	
 	public void showMenu() {
@@ -19,6 +28,7 @@ public class MemberUI {
 		while(true) {
 			System.out.println("명령어를 입력해 주세요 : ");
 			
+			// controller
 			command = scan.nextLine();
 			if(command.equalsIgnoreCase("exit")) {
 				System.out.println("시스템을 종료");
@@ -29,7 +39,7 @@ public class MemberUI {
 				continue;
 			}
 			else if(command.toLowerCase().startsWith("change ")) {
-				
+				processChangeCommand(command.split(" "));
 			}
 			else if(command.equalsIgnoreCase("list")) {
 				processListCommand();
@@ -52,6 +62,10 @@ public class MemberUI {
 	}
 	
 	public void processListCommand() {
-		// memberRegisterService.printAll();
+		memberListPrinterService.printAll();
+	}
+	
+	public void processChangeCommand(String[] args) {
+		memberChangeService.changePassword(args[1], args[2], args[3]);
 	}
 }
