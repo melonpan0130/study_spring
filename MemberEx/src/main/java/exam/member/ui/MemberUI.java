@@ -2,14 +2,21 @@ package exam.member.ui;
 
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import exam.member.service.MemberChangeService;
 import exam.member.service.MemberListPrintService;
 import exam.member.service.MemberRegisterService;
 import exam.member.vo.RegisterRequest;
 
+@Component("memberUI")
 public class MemberUI {
+	@Autowired
 	MemberRegisterService memberRegisterService;
+	@Autowired
 	MemberListPrintService memberListPrinterService;
+	@Autowired
 	MemberChangeService memberChangeService;
 	
 	public MemberUI() { }
@@ -20,6 +27,10 @@ public class MemberUI {
 	
 	public void setMemberListPrintService(MemberListPrintService memberListPrinterService) {
 		this.memberListPrinterService = memberListPrinterService;
+	}
+	
+	public void setMemberChangeService(MemberChangeService memberChangeService) {
+		this.memberChangeService = memberChangeService;
 	}
 	
 	public void showMenu() {

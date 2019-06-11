@@ -49,5 +49,12 @@ public class MemberVo {
 		this.registerDate = registerDate;
 	}
 	
+	public void changePassword(String oldPassword, String newPassword) {
+		if(password.equals(oldPassword))
+			if(!password.equals(oldPassword)) 
+				System.out.println("Error");
+			else 
+				setPassword(newPassword);
+	}
 	
 }
