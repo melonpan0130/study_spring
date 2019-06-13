@@ -16,9 +16,14 @@
 <fullyQualifiedTypeName name="exam.member.service.MemberPrinterService"/>
 <fullyQualifiedTypeName name="exam.member.service.MemberPrinterServiceImpl"/>
 <fullyQualifiedTypeName name="exam.member.service.MemberListPrintServiceImpl"/>
-<fullyQualifiedTypeName name="exam.member.ui.MemberUI"/>
 <fullyQualifiedTypeName name="exam.member.service.MemberListPrintService"/>
-<fullyQualifiedTypeName name="exam.member.service.MemberChangeService"/>
 <fullyQualifiedTypeName name="exam.member.dao.MemberDao"/>
 <fullyQualifiedTypeName name="exam.member.vo.MemberVo"/>
+<fullyQualifiedTypeName name="exam.member.service.MemberChangeService"/>
+<fullyQualifiedTypeName name="exam.member.service.MemberChangeServiceImpl"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="exam.member.ui.MemberUI"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 </qualifiedTypeNameHistroy>
