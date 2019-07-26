@@ -55,6 +55,8 @@ public class MemberUI {
 			else if(command.equalsIgnoreCase("list")) {
 				processListCommand();
 				continue;
+			} else {
+				
 			}
 			
 			

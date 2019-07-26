@@ -73,7 +73,6 @@ public class HomeController {
 		return "Have a good day";
 	}
 	
-	
 	/*
 	@RequestMapping ("article/newArticle.do")
 	public class NewArticleController {

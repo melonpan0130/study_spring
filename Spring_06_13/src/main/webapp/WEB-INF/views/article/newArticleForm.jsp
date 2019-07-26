@@ -5,7 +5,10 @@
 	<title>new article form</title>
 </head>
 <body>
-	<form method="post">
+	<%
+		String context = request.getContextPath();
+	%>
+	<form method="post" action="<%= context %>/article/newArticleSubmitted">
 		<label>title : </label><input type="text" name="title">
 		<label>content : </label><textarea name="content"></textarea>
 		<input type="submit" value="submit">
